@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    cursor:url('cursor-1.png'),auto;
+    height:100vh;
+    width: 100vw;
+    background-color:#131313;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    font-family: "Montserrat", sans-serif;
+}
+ul li{
+    list-style-type: none;
+}
+.container{
+    background-color: #333;
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    padding: 20px;
+    overflow: hidden;
+}
+.container .head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: 600;
+}
+.upload_container{
+    margin: 20px auto;
+    min-height: 150px;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    border: 2px dashed #4caf50;
+    cursor: pointer;
+}
+.upload_container i{
+    font-size: 90px;
+    opacity: 0.5;
+}
+.upload_container span{
+    font-size: 13px;
+}
+.upload_container input{
+    width: 100%;
+    height: 100% !important;
+}
+.file_container{
+    /* background-color: #4caf50; */
+    /* padding: 10px; */
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.file_container .file_item{
+    background-color: #4d4d4d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 60px;
+    border-radius: 10px;
+    padding: 15px;
+    animation: slide .5s ease;
+}
+@keyframes slide{
+    0% {
+        transform: translateX(-100px);
+    }
+    50%{
+        transform: translateX(20px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+.file_item .file_icon{
+    font-size: 25px;
+    display: flex;
+    justify-content:center;
+    align-items: center; 
+}
+
+
+.file_item .file_content{
+    width: 70%;
+    /* background-color: #4caf50; */
+}
+.file_content .progress-bar{
+    height: 8px;
+    width: 100%;
+    border-radius: 30px;
+    margin-top: 8px;
+    background-color: #5c5c5c;
+    overflow: hidden;
+}
+.progress-bar .progress{
+    height: 100%;
+    /* width: 50%; */
+    border-radius: 30px;
+    background-color: #4af850;
+    animation: bar 4s ease-in ;
+}
+@keyframes bar {
+    0%   {width: 0%;}
+    100% {width: 100%;}
+}
+
+
+.file_item .status{
+    display: flex;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: #4af850;
+    border-radius: 19px;
+}
