@@ -57,11 +57,22 @@ ul li{
 }
 .file_container{
     /* background-color: #4caf50; */
-    /* padding: 10px; */
+    padding: 10px;
     gap: 10px;
     display: flex;
     flex-direction: column;
-    
+    max-height: 232px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.file_container::-webkit-scrollbar{
+    width: 6px;
+    border-radius: 5px;
+    background-color: #4d4d4d;
+}
+.file_container::-webkit-scrollbar-thumb{
+    background-color: #4af850;
+    border-radius: 5px;
 }
 .file_container .file_item{
     background-color: #4d4d4d;
@@ -84,6 +95,13 @@ ul li{
         transform: translateX(0px);
     }
 }
+
+.progress-area, .uploaded-area{
+    list-style-type: none;
+    color:#f0f8ff;
+}
+
+
 .file_item .file_icon{
     font-size: 25px;
     display: flex;
@@ -106,15 +124,16 @@ ul li{
 }
 .progress-bar .progress{
     height: 100%;
-    /* width: 50%; */
+    width: 0%;
     border-radius: 30px;
     background-color: #4af850;
-    animation: bar 4s ease-in ;
+    transition: ease;
+    /* animation: bar 4s ease-in ; */
 }
-@keyframes bar {
+/* @keyframes bar {
     0%   {width: 0%;}
     100% {width: 100%;}
-}
+} */
 
 
 .file_item .status{
@@ -126,3 +145,73 @@ ul li{
     color: #4af850;
     border-radius: 19px;
 }
+
+
+
+ .row{
+    margin-bottom: 10px;
+    background: #646464;
+    list-style: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+.row i{
+    color: #8e05ff;
+    font-size: 30px;
+  }
+  .details span{
+    font-size: 14px;
+  }
+  .progress-area .row .content{
+    width: 100%;
+    margin-left: 15px;
+  }
+  .progress-area .details{
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+    justify-content: space-between;
+  }
+  .progress-area .content .progress-bar{
+    height: 6px;
+    width: 100%;
+    margin-bottom: 4px;
+    background: #fff;
+    border-radius: 30px;
+  }
+  .content .progress-bar .progress{
+    height: 100%;
+    width: 0%;
+    background: #8e05ff;
+    box-shadow: 0 0 10px #8e05ff;
+    border-radius: inherit;
+  }
+  .uploaded-area{
+    max-height: 232px;
+    overflow-y: scroll;
+  }
+  .uploaded-area.onprogress{
+    max-height: 150px;
+  }
+  .uploaded-area::-webkit-scrollbar{
+    width: 0px;
+  }
+  .uploaded-area .row .content{
+    display: flex;
+    align-items: center;
+  }
+  .uploaded-area .row .details{
+    display: flex;
+    margin-left: 15px;
+    flex-direction: column;
+  }
+  .uploaded-area .row .details .size{
+    color: #e9f2ff;
+    font-size: 11px;
+  }
+  .uploaded-area i.fa-check{
+    font-size: 16px;
+  }

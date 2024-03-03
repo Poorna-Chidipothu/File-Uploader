@@ -13,19 +13,19 @@
             File Uploader (Demo)
         </div>
         <!-- Form -->
-        <div class="upload_container">
+        <form class="upload_container" action="#">
             <i class="ri-upload-cloud-fill"></i>
             <span>Click here to upload a file.</span>
-            <input type="file" hidden>
-        </div>
-        <ul class="file_container">
+            <input class="file-input" type="file" name="file" hidden>
+        </form>
+        <!-- <ul class="file_container">
             <li class="file_item">
                 <div class="file_icon">
                     <i class="ri-file-text-fill"></i>
                 </div>
                 <div class="file_content">
                     sample.pdf . Uploading...
-                    <!-- <span>5 MB</span> -->
+                    <span>5 MB</span>
                     <div class="progress-bar">
                         <div class="progress"></div>
                     </div>
@@ -41,7 +41,7 @@
                 </div>
                 <div class="file_content">
                     apollo.pdf . Uploading...
-                    <!-- <span>5 MB</span> -->
+                    <span>5 MB</span>
                     <div class="progress-bar">
                         <div class="progress"></div>
                     </div>
@@ -57,7 +57,7 @@
                 </div>
                 <div class="file_content">
                     demo.pdf . Uploading...
-                    <!-- <span>5 MB</span> -->
+                    <span>5 MB</span>
                     <div class="progress-bar">
                         <div class="progress"></div>
                     </div>
@@ -66,7 +66,27 @@
                     <i class="ri-checkbox-circle-fill"></i>
                 </div>
             </li>
-        </ul>
+
+            <li class="file_item">
+                <div class="file_icon">
+                    <i class="ri-file-text-fill"></i>
+                </div>
+                <div class="file_content">
+                    demo.pdf . Uploading...
+                    <span>5 MB</span>
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+                </div>
+                <div class="status">
+                    <i class="ri-checkbox-circle-fill"></i>
+                </div>
+            </li>
+        </ul> -->
+        <div class="progress-area"></div>
+        <div class="uploaded-area"></div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
